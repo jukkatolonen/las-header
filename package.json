@@ -1,7 +1,8 @@
 {
   "name": "las-header",
   "version": "0.0.1",
-  "description": "",
+  "description": "Read LAS/LAZ header in browser and node.js",
+  "repository": "https://github.com/jukkatolonen/las-header",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
