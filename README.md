@@ -16,17 +16,17 @@ Or
 import lasHeader from 'las-header';
 ```
 
-From File object
+**From File object**
 ```
 const header = await lasHeader.fromFileObject({input: files[0]});
 ```
 
-From URL
+**From URL**
 ```
 const header = await lasHeader.fromUrl({input: myUrl});
 ```
 
-From local LAS/LAZ file (Node only)
+**From local LAS/LAZ file (Node only)**
 ```
 const header = lasHeader.fromLocalFile({input: path/to/file.laz});
 ```
