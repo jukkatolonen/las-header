@@ -12,7 +12,7 @@ class readHeader {
         this.inputArrayBuffer = options.inputArrayBuffer;
         this.inputDataView = options.inputDataView;
         this.currentByte = 0;
-        this.numOfVarLengthrecords = 0;
+        this.numOfVarLenRecords = 0;
         this.projectionStart = 0;
     }
 
@@ -29,7 +29,7 @@ class readHeader {
         });
 
         let variableRecords = [];
-        for (let i = 0; i < this.numOfVarLengthrecords; i++) {
+        for (let i = 0; i < this.numOfVarLenRecords; i++) {
             let variableObj = {};            
             headerBlock.variableLengthRecord.forEach((obj) => {
                 let myObj = this.getValue({...obj});
@@ -100,7 +100,7 @@ class readHeader {
             case 'uLong':
                 str = this.inputDataView.getUint32(this.currentByte, true);
                 if (item === 'NumberOfVariableLengthRecords') {
-                    this.numOfVarLengthrecords = str;
+                    this.numOfVarLenRecords = str;
                 }
                 this.currentByte += size;
                 return [item, str]
