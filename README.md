@@ -21,12 +21,12 @@ const header = await lasHeader.readFileObject({input: files[0]});
 
 **From URL**
 ```
-const header = await lasHeader.readUrl({input: myUrl});
+const header = await lasHeader.readUrl({input: 'https://my.domain.com/file.laz'});
 ```
 
 **From local LAS/LAZ file (Node only)**
 ```
-const header = lasHeader.readLocalFile({input: path/to/file.laz});
+const header = lasHeader.readLocalFile({input: 'path/to/file.laz'});
 ```
 
 Sample output:
