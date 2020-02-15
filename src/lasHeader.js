@@ -13,14 +13,14 @@ const assertInput = (options) => {
     }  
 };
 
-const fromLocalFile = (options = {}) => { 
+const readLocalFile = (options = {}) => { 
     assertInput(options);
     const input = options.input;
     const buffer = bufferFromLocalFile({input});
     return parseHeaders({buffer}); 
 };
 
-const fromUrl = async (options = {}) => { 
+const readUrl = async (options = {}) => { 
     assertInput(options);
     const input = options.input;
     //const inpuBuffer = await bufferFromUrl({input});            
@@ -28,7 +28,7 @@ const fromUrl = async (options = {}) => {
     return parseHeaders({buffer, arrayBuffer});   
 };
 
-const fromFileObject = async (options = {}) => {
+const readFileObject = async (options = {}) => {
     assertInput(options);
     const input = options.input;
     //const inpuBuffer = await fileObjToBuffer({input});
@@ -49,7 +49,7 @@ const parseHeaders = (options = {}) => {
 }
 
 module.exports = {
-    fromLocalFile,
-    fromUrl,
-    fromFileObject,
+    readLocalFile,
+    readUrl,
+    readFileObject,
 };

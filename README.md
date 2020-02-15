@@ -10,26 +10,26 @@ $ npm i las-header
 # Usage
 ```
 const lasHeader = require('las-header');
-Or
+or
 import lasHeader from 'las-header';
 ```
 
 **From File object**
 ```
-const header = await lasHeader.fromFileObject({input: files[0]});
+const header = await lasHeader.readFileObject({input: files[0]});
 ```
 
 **From URL**
 ```
-const header = await lasHeader.fromUrl({input: myUrl});
+const header = await lasHeader.readUrl({input: myUrl});
 ```
 
 **From local LAS/LAZ file (Node only)**
 ```
-const header = lasHeader.fromLocalFile({input: path/to/file.laz});
+const header = lasHeader.readLocalFile({input: path/to/file.laz});
 ```
 
-Output:
+Sample output:
 ```
 { 
   FileSignature: 'LASF',
