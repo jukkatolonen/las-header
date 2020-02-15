@@ -1,6 +1,6 @@
 {
   "name": "las-header",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Read LAS/LAZ header in browser and node.js",
   "repository": "https://github.com/jukkatolonen/las-header",
   "main": "index.js",

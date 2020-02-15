@@ -1,7 +1,7 @@
 const fs = require('fs');
 const epsgCheck = require('epsg-index/all.json');
 const fetch = require('node-fetch');
-const BufferLib = require('buffer/').Buffer
+const bufferLib = require('buffer/').Buffer
 
 const bufferFromLocalFile = ({input, start = 0, end = 2000}) => {
   const buffer = new Buffer.alloc(end - start);
@@ -15,7 +15,7 @@ const bufferFromUrl = async ({input}) => {
     return await fetch(input)
         .then(async (res) => {
             const arrayBuffer = await res.arrayBuffer();
-            const buffer = BufferLib.from(arrayBuffer);             
+            const buffer = bufferLib.from(arrayBuffer);             
             return {buffer, arrayBuffer};
         });
 };
@@ -49,7 +49,7 @@ const uint8arrayToString = (array) => {
 
 const fileObjToBuffer = async ({input, start = 0, end = 2000}) => {
     const arrayBuffer = await fileObjToArrBuffer({input, start, end});
-    const buffer = BufferLib.from(arrayBuffer);
+    const buffer = bufferLib.from(arrayBuffer);
     return {buffer, arrayBuffer}; 
 };
 

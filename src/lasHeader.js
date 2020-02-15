@@ -23,7 +23,6 @@ const readLocalFile = (options = {}) => {
 const readUrl = async (options = {}) => { 
     assertInput(options);
     const input = options.input;
-    //const inpuBuffer = await bufferFromUrl({input});            
     const {buffer, arrayBuffer} = await bufferFromUrl({input});
     return parseHeaders({buffer, arrayBuffer});   
 };
@@ -31,7 +30,6 @@ const readUrl = async (options = {}) => {
 const readFileObject = async (options = {}) => {
     assertInput(options);
     const input = options.input;
-    //const inpuBuffer = await fileObjToBuffer({input});
     const {buffer, arrayBuffer} = await fileObjToBuffer({input});
     return parseHeaders({buffer, arrayBuffer}); 
 }
