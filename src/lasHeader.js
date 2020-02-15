@@ -17,24 +17,24 @@ const readLocalFile = (options = {}) => {
     assertOptions(options);
     const input = options.input;
     const buffer = bufferFromLocalFile({input});
-    return parseHeaders({buffer}); 
+    return bringMeTheHeader({buffer}); 
 };
 
 const readUrl = async (options = {}) => { 
     assertOptions(options);
     const input = options.input;
     const {buffer, arrayBuffer} = await bufferFromUrl({input});
-    return parseHeaders({buffer, arrayBuffer});   
+    return bringMeTheHeader({buffer, arrayBuffer});   
 };
 
 const readFileObject = async (options = {}) => {
     assertOptions(options);
     const input = options.input;
     const {buffer, arrayBuffer} = await fileObjToBuffer({input});
-    return parseHeaders({buffer, arrayBuffer}); 
+    return bringMeTheHeader({buffer, arrayBuffer}); 
 }
 
-const parseHeaders = (options = {}) => {
+const bringMeTheHeader = (options = {}) => {
     const inputArrayBuffer = options.arrayBuffer ? 
         options.arrayBuffer : bufferFlipper(options.buffer);      
     const inputDataView = new DataView(inputArrayBuffer);            
