@@ -19,7 +19,7 @@ import lasHeader from 'las-header';
 const header = await lasHeader.readFileObject({input: files[0]});
 ```
 
-**From URL**
+**From URL (painfully slow, though)**
 ```
 const header = await lasHeader.readUrl({input: 'https://my.domain.com/file.laz'});
 ```
