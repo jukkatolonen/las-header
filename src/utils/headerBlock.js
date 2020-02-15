@@ -1,0 +1,47 @@
+ const publicHeaderBlock = [
+    {item: 'FileSignature', format: 'char', size: 4},
+    {item: 'FileSoureceID', format: 'uShort', size: 2},
+    {item: 'GlobalEncoding', format: 'uShort', size: 2},
+    {item: 'ProjectID1', format: 'notUsed', size: 4},
+    {item: 'ProjectID2', format: 'notUsed', size: 2},
+    {item: 'ProjectID3', format: 'notUsed', size: 2},
+    {item: 'ProjectID4', format: 'notUsed', size: 8},
+    {item: 'VersionMajor', format: 'uChar', size: 1},
+    {item: 'VersionMinor', format: 'uChar', size: 1},
+    {item: 'SystemIdentifier', format: 'char', size: 32},
+    {item: 'GeneratingSoftware', format: 'char', size: 32},
+    {item: 'CreationDay', format: 'uShort', size: 2},
+    {item: 'CreationYear', format: 'uShort', size: 2},
+    {item: 'HeaderSize', format: 'uShort', size: 2},
+    {item: 'OffsetToPointData', format: 'uLong', size: 4},
+    {item: 'NumberOfVariableLengthRecords', format: 'uLong', size: 4},
+    {item: 'PointDataFormatID', format: 'uChar', size: 1},
+    {item: 'PointDataRecordLength', format: 'uShort', size: 2},
+    {item: 'NumberOfPoints', format: 'uLong', size: 4},
+    {item: 'NumberOfPointByReturn', format: 'uLong', size: 20},
+    {item: 'ScaleFactorX', format: 'double', size: 8},
+    {item: 'ScaleFactorY', format: 'double', size: 8},
+    {item: 'ScaleFactorZ', format: 'double', size: 8},
+    {item: 'OffsetX', format: 'double', size: 8},
+    {item: 'OffsetY', format: 'double', size: 8},
+    {item: 'OffsetZ', format: 'double', size: 8},
+    {item: 'MaxX', format: 'double', size: 8},
+    {item: 'MinX', format: 'double', size: 8},
+    {item: 'MaxY', format: 'double', size: 8},
+    {item: 'MinY', format: 'double', size: 8},
+    {item: 'MaxZ', format: 'double', size: 8},
+    {item: 'MinZ', format: 'double', size: 8},
+];
+
+const variableLengthRecord = [
+    {item: 'Reserved', format: 'uShort', size: 2},
+    {item: 'UserId', format: 'char', size: 16},
+    {item: 'RecordId', format: 'uShort', size: 2},
+    {item: 'RecordLengthAfterHeader', format: 'uShort', size: 2},
+    {item: 'Description', format: 'char', size: 32},
+];
+
+module.exports = {
+    publicHeaderBlock,
+    variableLengthRecord,
+}

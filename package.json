@@ -1,0 +1,23 @@
+{
+  "name": "las-header",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Point clouds",
+    "LAS",
+    "LAZ",
+    "header"
+  ],
+  "author": "Jukka Tolonen",
+  "license": "MIT",
+  "dependencies": {
+    "buffer": "^5.4.3",
+    "epsg-index": "^1.0.0",
+    "node-fetch": "^2.6.0"
+  },
+  "devDependencies": {}
+}
