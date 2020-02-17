@@ -32,7 +32,7 @@ const readFileObject = async (options = {}) => {
     const input = options.input;
     const {buffer, arrayBuffer} = await fileObjToBuffer({input});
     return bringMeTheHeader({buffer, arrayBuffer}); 
-}
+};
 
 const bringMeTheHeader = (options = {}) => {
     const inputArrayBuffer = options.arrayBuffer ? 
@@ -44,7 +44,7 @@ const bringMeTheHeader = (options = {}) => {
         inputDataView,
     });      
     return header.getValues();      
-}
+};
 
 module.exports = {
     readLocalFile,

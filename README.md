@@ -10,7 +10,7 @@ $ npm i las-header
 # Usage
 ```
 const lasHeader = require('las-header');
-or
+//or
 import lasHeader from 'las-header';
 ```
 

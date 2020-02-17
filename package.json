@@ -1,7 +1,7 @@
 {
   "name": "las-header",
   "version": "0.0.4",
-  "description": "Read LAS/LAZ header in browser and node.js",
+  "description": "Read point cloud's (LAS/LAZ) header in browser and node.js",
   "repository": "https://github.com/jukkatolonen/las-header",
   "main": "index.js",
   "scripts": {

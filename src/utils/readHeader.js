@@ -91,27 +91,27 @@ class readHeader {
             case 'char':
                 array = new Uint8Array(this.inputArrayBuffer, this.currentByte, size);
                 this.currentByte += size;
-                str = uint8arrayToString(array)
-                return [item, str]
+                str = uint8arrayToString(array);
+                return [item, str];
             case 'uShort':
                 str = this.inputDataView.getUint16(this.currentByte, true);
                 this.currentByte += size;
-                return [item, str]
+                return [item, str];
             case 'uLong':
                 str = this.inputDataView.getUint32(this.currentByte, true);
                 if (item === 'NumberOfVariableLengthRecords') {
                     this.numOfVarLenRecords = str;
                 }
                 this.currentByte += size;
-                return [item, str]
+                return [item, str];
             case 'uChar':
                 str = this.inputDataView.getUint8(this.currentByte);                
                 this.currentByte += size;
-                return [item, str]
+                return [item, str];
             case 'double':
                 str = this.inputDataView.getFloat64(this.currentByte, true);                
                 this.currentByte += size;
-                return [item, str]
+                return [item, str];
             default:
                 this.currentByte += size;
           }    
