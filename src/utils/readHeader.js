@@ -29,7 +29,9 @@ class readHeader {
         });
 
         let variableRecords = [];
-        for (let i = 0; i < this.numOfVarLenRecords; i++) {
+        let variableLengthRecords = this.numOfVarLenRecords;
+        
+        while (variableLengthRecords--) {            
             let variableObj = {};            
             headerBlock.variableLengthRecord.forEach((obj) => {
                 let myObj = this.getValue({...obj});
