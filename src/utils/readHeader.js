@@ -19,7 +19,7 @@ class readHeader {
     getValues() {
         let publicHeaderBlock = {};
         headerBlock.publicHeaderBlock.forEach((obj) => {
-            let myObj = this.getValue({...obj});             
+            const myObj = this.getValue({...obj});             
             if (myObj !== undefined)  {
                 if (myObj[0] === 'FileSignature' && myObj[1] !== 'LASF') {
                     throw new Error('Ivalid FileSignature. Is this a LAS/LAZ file');   
@@ -34,7 +34,7 @@ class readHeader {
         while (variableLengthRecords--) {            
             let variableObj = {};            
             headerBlock.variableLengthRecord.forEach((obj) => {
-                let myObj = this.getValue({...obj});
+                const myObj = this.getValue({...obj});
                 variableObj[myObj[0]] = myObj[1];
 
                 if (myObj[0] === 'UserId' && myObj[1] === 'LASF_Projection') {
